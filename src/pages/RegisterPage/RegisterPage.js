@@ -5,11 +5,11 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 // var passwordRegex = new RegExp('');
  const signupSchema = yup.object({
-    firstname: yup.string().min(3).required('please enter your first name.'),
-    lastname: yup.string().min(3).required('please enter your last first name.'),
-    email: yup.string().email('please enter your valid email.').required('please enter your valid email.'),
-    password: yup.string().matches(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9@#$%^&*]{8,15}$/, 'please enter your password.').required('please enter your password.'),
-    confirmpassword: yup.string().oneOf([yup.ref('password')], 'password do not match!').required('plase enter your confirm password'),
+    firstname: yup.string().min(3).required('Please enter your first name.'),
+    lastname: yup.string().min(3).required('Please enter your last name.'),
+    email: yup.string().email('Please enter your valid email.').required('Please enter your valid email.'),
+    password: yup.string().matches(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9@#$%^&*]{8,15}$/, 'Please enter your password.').required('Please enter your password.'),
+    confirmpassword: yup.string().oneOf([yup.ref('password')], 'Password do not match!').required('Please enter your confirm password'),
   });
 
   const initialValues = {

@@ -5,8 +5,8 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 // var passwordRegex = new RegExp('');
  const loginSchema = yup.object({
-    email: yup.string().email('please enter your valid email.').required('please enter your valid email.'),
-    password: yup.string().matches(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9@#$%^&*]{8,15}$/, 'please enter your password.').required('please enter your password.'),
+    email: yup.string().email('Please enter your valid username.').required('Please enter your valid username.'),
+    password: yup.string().matches(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9@#$%^&*]{8,15}$/, 'Please enter your password.').required('Please enter your password.'),
   });
 
   const initialValues = {
