@@ -1,0 +1,30 @@
+@import "../../App.scss";
+
+.header{
+    background: rgb(249,78,48);
+    background: linear-gradient(180deg, #212121 0%, #212121 100%);
+
+    .header-cnt-top{
+        border-bottom: 1px solid #7c7777;
+    }
+   
+
+    @media screen and (max-width: 992px){
+        .header-cnt-top{
+            flex-direction: column;
+            .header-cnt-top-l{
+                margin-bottom: 4px;
+            }
+        }
+    }
+    
+}
+
+@media(max-width:480px){
+    .header-cnt-top-l span.fs-13 {
+        display: none;
+    }
+    .header-cnt-bottom .navbar-cart {
+        margin-left: 20px;
+    }
+}
